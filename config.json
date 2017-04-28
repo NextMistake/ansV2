@@ -1,0 +1,14 @@
+{
+  "db" :
+  {
+    "host" : "localhost",
+    "user" : "root",
+    "passwd" : "buptana",
+    "db" : "analysis",
+    "port" : 3306
+  },
+  "file" :
+  {
+
+  }
+}

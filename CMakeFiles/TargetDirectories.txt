@@ -1,0 +1,3 @@
+/home/well/Desktop/ansV2/CMakeFiles/rebuild_cache.dir
+/home/well/Desktop/ansV2/CMakeFiles/edit_cache.dir
+/home/well/Desktop/ansV2/CMakeFiles/ansV2.dir
