@@ -18,29 +18,33 @@ public:
     ans_Config();
     bool read_config(std::string);
 
-
 private:
+
     // flow path config
-    std::string flow_root;
-    std::vector<ans_PathMatcher> path_matchers;
+    bool breakpoint;
     bool monitor;
+    std::string flowroot;
+    std::vector<std::string> matchers;
 
-    // db configls
-    std::string db_host;
-    std::string db_user;
-    std::string db_passwd;
-    std::string db_db;
-    int db_port;
-
-    // log config
-    ans_Log log;
+    // filters config
+    std::vector<std::string> filters;
 
     // run config
     int max_memory/*MB*/;
     int max_thread;
 
-    ans_File file_module;
+    // plugins config
+    std::vector<std::string> plugins;
 
+    // db config
+    std::string db_host;
+    std::string db_user;
+    std::string db_passwd;
+    std::string db_name;
+    int db_port;
+
+    // log config
+    std::string logroot;
 };
 
 #endif //ANSV2_ANS_CONFIG_H

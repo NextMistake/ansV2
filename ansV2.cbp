@@ -93,6 +93,9 @@
 		<Unit filename="/home/well/Desktop/ansV2/src/ans_File.h">
 			<Option target="ansV2"/>
 		</Unit>
+		<Unit filename="/home/well/Desktop/ansV2/src/ans_Log.cpp">
+			<Option target="ansV2"/>
+		</Unit>
 		<Unit filename="/home/well/Desktop/ansV2/src/ans_Log.h">
 			<Option target="ansV2"/>
 		</Unit>

@@ -1,14 +1,38 @@
 {
+  "file" :
+  {
+    "rootpath" : "",
+    "breakpoint" : "on",
+    "monitor" : "on",
+    "matcher" :
+    [
+      "123",
+      "12"
+    ]
+  },
+  "pkt_filters" :
+  [
+
+  ],
+  "run" :
+  {
+    "max_memory" : 10,
+    "max_thread" : 10
+  },
+  "plugins":
+  [
+    ""
+  ],
   "db" :
   {
     "host" : "localhost",
     "user" : "root",
     "passwd" : "buptana",
-    "db" : "analysis",
-    "port" : 3306
+    "name" : "analysis",
+    "port" : 3390
   },
-  "file" :
+  "log" :
   {
-
+    "log_root" : "/home/well/logs/"
   }
 }

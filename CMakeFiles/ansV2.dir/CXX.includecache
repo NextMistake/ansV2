@@ -28,7 +28,15 @@ ans_Log.h
 
 /home/well/Desktop/ansV2/src/ans_File.h
 
+/home/well/Desktop/ansV2/src/ans_Log.cpp
+ans_Log.h
 /home/well/Desktop/ansV2/src/ans_Log.h
+spdlog/spdlog.h
+/home/well/Desktop/ansV2/src/spdlog/spdlog.h
+
+/home/well/Desktop/ansV2/src/ans_Log.h
+string
+-
 
 /home/well/Desktop/ansV2/src/main.cpp
 iostream

@@ -1,0 +1,4 @@
+/home/well/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /home/well/Desktop/ansV2
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/well/Desktop/ansV2

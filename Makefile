@@ -150,6 +150,33 @@ src/ans_Config.cpp.s:
 	$(MAKE) -f CMakeFiles/ansV2.dir/build.make CMakeFiles/ansV2.dir/src/ans_Config.cpp.s
 .PHONY : src/ans_Config.cpp.s
 
+src/ans_Log.o: src/ans_Log.cpp.o
+
+.PHONY : src/ans_Log.o
+
+# target to build an object file
+src/ans_Log.cpp.o:
+	$(MAKE) -f CMakeFiles/ansV2.dir/build.make CMakeFiles/ansV2.dir/src/ans_Log.cpp.o
+.PHONY : src/ans_Log.cpp.o
+
+src/ans_Log.i: src/ans_Log.cpp.i
+
+.PHONY : src/ans_Log.i
+
+# target to preprocess a source file
+src/ans_Log.cpp.i:
+	$(MAKE) -f CMakeFiles/ansV2.dir/build.make CMakeFiles/ansV2.dir/src/ans_Log.cpp.i
+.PHONY : src/ans_Log.cpp.i
+
+src/ans_Log.s: src/ans_Log.cpp.s
+
+.PHONY : src/ans_Log.s
+
+# target to generate assembly for a file
+src/ans_Log.cpp.s:
+	$(MAKE) -f CMakeFiles/ansV2.dir/build.make CMakeFiles/ansV2.dir/src/ans_Log.cpp.s
+.PHONY : src/ans_Log.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -189,6 +216,9 @@ help:
 	@echo "... src/ans_Config.o"
 	@echo "... src/ans_Config.i"
 	@echo "... src/ans_Config.s"
+	@echo "... src/ans_Log.o"
+	@echo "... src/ans_Log.i"
+	@echo "... src/ans_Log.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

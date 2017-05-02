@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/well/Desktop/ansV2/src/ans_Config.cpp" "/home/well/Desktop/ansV2/CMakeFiles/ansV2.dir/src/ans_Config.cpp.o"
+  "/home/well/Desktop/ansV2/src/ans_Log.cpp" "/home/well/Desktop/ansV2/CMakeFiles/ansV2.dir/src/ans_Log.cpp.o"
   "/home/well/Desktop/ansV2/src/main.cpp" "/home/well/Desktop/ansV2/CMakeFiles/ansV2.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
