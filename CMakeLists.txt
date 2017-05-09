@@ -5,5 +5,5 @@ set(CMAKE_CXX_STANDARD 11)
 
 include_directories(src)
 
-set(SOURCE_FILES src/main.cpp src/ans_Config.h src/ans_Log.h src/ans_File.h src/ans_Recombine.h src/nlohann_json.hpp src/ans_Config.cpp src/ans_Log.cpp)
+set(SOURCE_FILES src/main.cpp src/ans_Config.h src/ans_Log.h src/ans_File.h src/ans_Recombine.h src/nlohann_json.hpp src/ans_Config.cpp src/ans_Log.cpp src/ans.h src/ans.cpp src/ans_File.cpp)
 add_executable(ansV2 ${SOURCE_FILES})

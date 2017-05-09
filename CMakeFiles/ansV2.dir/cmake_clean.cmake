@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ansV2.dir/src/main.cpp.o"
   "CMakeFiles/ansV2.dir/src/ans_Config.cpp.o"
   "CMakeFiles/ansV2.dir/src/ans_Log.cpp.o"
+  "CMakeFiles/ansV2.dir/src/ans.cpp.o"
+  "CMakeFiles/ansV2.dir/src/ans_File.cpp.o"
   "ansV2.pdb"
   "ansV2"
 )

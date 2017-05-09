@@ -123,6 +123,33 @@ ansV2/fast:
 	$(MAKE) -f CMakeFiles/ansV2.dir/build.make CMakeFiles/ansV2.dir/build
 .PHONY : ansV2/fast
 
+src/ans.o: src/ans.cpp.o
+
+.PHONY : src/ans.o
+
+# target to build an object file
+src/ans.cpp.o:
+	$(MAKE) -f CMakeFiles/ansV2.dir/build.make CMakeFiles/ansV2.dir/src/ans.cpp.o
+.PHONY : src/ans.cpp.o
+
+src/ans.i: src/ans.cpp.i
+
+.PHONY : src/ans.i
+
+# target to preprocess a source file
+src/ans.cpp.i:
+	$(MAKE) -f CMakeFiles/ansV2.dir/build.make CMakeFiles/ansV2.dir/src/ans.cpp.i
+.PHONY : src/ans.cpp.i
+
+src/ans.s: src/ans.cpp.s
+
+.PHONY : src/ans.s
+
+# target to generate assembly for a file
+src/ans.cpp.s:
+	$(MAKE) -f CMakeFiles/ansV2.dir/build.make CMakeFiles/ansV2.dir/src/ans.cpp.s
+.PHONY : src/ans.cpp.s
+
 src/ans_Config.o: src/ans_Config.cpp.o
 
 .PHONY : src/ans_Config.o
@@ -149,6 +176,33 @@ src/ans_Config.s: src/ans_Config.cpp.s
 src/ans_Config.cpp.s:
 	$(MAKE) -f CMakeFiles/ansV2.dir/build.make CMakeFiles/ansV2.dir/src/ans_Config.cpp.s
 .PHONY : src/ans_Config.cpp.s
+
+src/ans_File.o: src/ans_File.cpp.o
+
+.PHONY : src/ans_File.o
+
+# target to build an object file
+src/ans_File.cpp.o:
+	$(MAKE) -f CMakeFiles/ansV2.dir/build.make CMakeFiles/ansV2.dir/src/ans_File.cpp.o
+.PHONY : src/ans_File.cpp.o
+
+src/ans_File.i: src/ans_File.cpp.i
+
+.PHONY : src/ans_File.i
+
+# target to preprocess a source file
+src/ans_File.cpp.i:
+	$(MAKE) -f CMakeFiles/ansV2.dir/build.make CMakeFiles/ansV2.dir/src/ans_File.cpp.i
+.PHONY : src/ans_File.cpp.i
+
+src/ans_File.s: src/ans_File.cpp.s
+
+.PHONY : src/ans_File.s
+
+# target to generate assembly for a file
+src/ans_File.cpp.s:
+	$(MAKE) -f CMakeFiles/ansV2.dir/build.make CMakeFiles/ansV2.dir/src/ans_File.cpp.s
+.PHONY : src/ans_File.cpp.s
 
 src/ans_Log.o: src/ans_Log.cpp.o
 
@@ -213,9 +267,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ansV2"
+	@echo "... src/ans.o"
+	@echo "... src/ans.i"
+	@echo "... src/ans.s"
 	@echo "... src/ans_Config.o"
 	@echo "... src/ans_Config.i"
 	@echo "... src/ans_Config.s"
+	@echo "... src/ans_File.o"
+	@echo "... src/ans_File.i"
+	@echo "... src/ans_File.s"
 	@echo "... src/ans_Log.o"
 	@echo "... src/ans_Log.i"
 	@echo "... src/ans_Log.s"

@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+/home/well/Desktop/ansV2/src/ans.cpp
+iostream
+-
+ans.h
+/home/well/Desktop/ansV2/src/ans.h
+
+/home/well/Desktop/ansV2/src/ans.h
+vector
+-
+memory
+-
+ans_Config.h
+/home/well/Desktop/ansV2/src/ans_Config.h
+ans_File.h
+/home/well/Desktop/ansV2/src/ans_File.h
+spdlog/spdlog.h
+/home/well/Desktop/ansV2/src/spdlog/spdlog.h
+
 /home/well/Desktop/ansV2/src/ans_Config.cpp
 fstream
 -
@@ -26,7 +44,19 @@ ans_File.h
 ans_Log.h
 /home/well/Desktop/ansV2/src/ans_Log.h
 
+/home/well/Desktop/ansV2/src/ans_File.cpp
+ans_File.h
 /home/well/Desktop/ansV2/src/ans_File.h
+
+/home/well/Desktop/ansV2/src/ans_File.h
+string
+-
+queue
+-
+memory
+-
+semaphore.h
+-
 
 /home/well/Desktop/ansV2/src/ans_Log.cpp
 ans_Log.h
@@ -41,6 +71,8 @@ string
 /home/well/Desktop/ansV2/src/main.cpp
 iostream
 -
+ans.h
+/home/well/Desktop/ansV2/src/ans.h
 ans_Config.h
 /home/well/Desktop/ansV2/src/ans_Config.h
 

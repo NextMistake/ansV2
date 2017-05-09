@@ -1,9 +1,9 @@
 {
   "file" :
   {
-    "rootpath" : "",
-    "breakpoint" : "on",
-    "monitor" : "on",
+    "rootpath" : "123",
+    "resumable" : true,
+    "persist" : true,
     "matcher" :
     [
       "123",
@@ -12,16 +12,17 @@
   },
   "pkt_filters" :
   [
-
+    "123"
   ],
   "run" :
   {
     "max_memory" : 10,
-    "max_thread" : 10
+    "max_thread" : 10,
+    "daemon" : "yes"
   },
   "plugins":
   [
-    ""
+    "123"
   ],
   "db" :
   {
@@ -31,8 +32,5 @@
     "name" : "analysis",
     "port" : 3390
   },
-  "log" :
-  {
-    "log_root" : "/home/well/logs/"
-  }
+  "logfile" : "/home/well/logs/ans"
 }

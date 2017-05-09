@@ -84,10 +84,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/well/Desktop/ansV2/src/ans.cpp">
+			<Option target="ansV2"/>
+		</Unit>
+		<Unit filename="/home/well/Desktop/ansV2/src/ans.h">
+			<Option target="ansV2"/>
+		</Unit>
 		<Unit filename="/home/well/Desktop/ansV2/src/ans_Config.cpp">
 			<Option target="ansV2"/>
 		</Unit>
 		<Unit filename="/home/well/Desktop/ansV2/src/ans_Config.h">
+			<Option target="ansV2"/>
+		</Unit>
+		<Unit filename="/home/well/Desktop/ansV2/src/ans_File.cpp">
 			<Option target="ansV2"/>
 		</Unit>
 		<Unit filename="/home/well/Desktop/ansV2/src/ans_File.h">
