@@ -71,6 +71,34 @@ CMakeFiles/ansV2.dir/src/ans_Config.cpp.o: src/spdlog/tweakme.h
 
 CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/ans_File.cpp
 CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/ans_File.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/spdlog.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/async_logger.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/common.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/details/async_log_helper.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/details/async_logger_impl.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/details/file_helper.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/details/log_msg.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/details/logger_impl.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/details/mpmc_bounded_q.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/details/null_mutex.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/details/os.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/details/pattern_formatter_impl.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/details/registry.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/details/spdlog_impl.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/fmt/bundled/format.cc
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/fmt/bundled/format.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/fmt/fmt.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/formatter.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/logger.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/sinks/android_sink.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/sinks/ansicolor_sink.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/sinks/base_sink.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/sinks/file_sinks.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/sinks/sink.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/sinks/stdout_sinks.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/sinks/syslog_sink.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/sinks/wincolor_sink.h
+CMakeFiles/ansV2.dir/src/ans_File.cpp.o: src/spdlog/tweakme.h
 
 CMakeFiles/ansV2.dir/src/ans_Log.cpp.o: src/ans_Log.cpp
 CMakeFiles/ansV2.dir/src/ans_Log.cpp.o: src/ans_Log.h

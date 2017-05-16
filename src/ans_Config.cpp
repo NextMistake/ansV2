@@ -10,6 +10,14 @@
 
 ans_Config::ans_Config() {}
 
+ans_Config::ans_Config(const ans_Config &config):
+_persist(config._persist),
+_flow_root(config._flow_root),
+_filter(config._filter),
+_plugins(config._plugins),
+_log_file(config._log_file)
+{}
+
 bool ans_Config::read_config(std::string) {
     std::ifstream json_file("config.json");
     if (!json_file) {
@@ -20,36 +28,12 @@ bool ans_Config::read_config(std::string) {
     nlohmann::json json = nlohmann::json::parse(json_file);
     json_file.close();
 
-    // flow path config reading
-    _flowroot = (json["file"]["rootpath"] != nullptr) ? json["file"]["rootpath"].get<std::string>() : nullptr;
+    _persist = json["persist"].get<bool>() ? true : false;
 
-    _resumable = json["file"]["resumable"].get<bool>()? true : false;
+    _flow_root = (json["root_path"] != nullptr) ? json["root_path"].get<std::string>() : nullptr;
 
-    _persist = json["file"]["persist"].get<bool>() ? true : false;
+    _filter = (json["pkt_filter"] != nullptr) ? json["pkt_filter"].get<std::string>() : nullptr;
 
-    if (nullptr != json["file"]["matcher"]) {
-        for (nlohmann::json::iterator ite = json["file"]["matcher"].begin();
-             ite != json["file"]["matcher"].end(); ite++) {
-            _matchers.push_back(ite.value().get<std::string>());
-        }
-    }
-
-    // pkt filters config reading
-    if (nullptr != json["pkt_filters"]) {
-        for (nlohmann::json::iterator ite = json["pkt_filters"].begin();
-                ite != json["pkt_filters"].end(); ite++) {
-            _filters.push_back(ite.value().get<std::string>());
-        }
-    }
-
-    // run config reading
-    _max_memory = (json["run"]["max_memory"] != nullptr) ? json["run"]["max_memory"].get<int>() : -1;
-
-    _max_thread = (json["run"]["max_thread"] != nullptr) ? json["run"]["max_thread"].get<int>() : -1;
-
-    _daemon = json["run"]["daemon"].get<std::string>() == "yes" ? true : false;
-
-    // plugin config reading
     if (nullptr != json["plugins"]) {
         for (nlohmann::json::iterator ite = json["plugins"].begin();
                 ite != json["plugins"].end(); ite++) {
@@ -57,25 +41,9 @@ bool ans_Config::read_config(std::string) {
         }
     }
 
-    // db config reading
-    _db_host = (json["db"]["host"] != nullptr) ? json["db"]["host"].get<std::string>() : nullptr;
-    _db_user = (json["db"]["user"] != nullptr) ? json["db"]["user"].get<std::string>() : nullptr;
-    _db_passwd = (json["db"]["passwd"] != nullptr) ? json["db"]["passwd"].get<std::string>() : nullptr;
-    _db_name = (json["db"]["name"] != nullptr) ? json["db"]["name"].get<std::string>() : nullptr;
-    _db_port = (json["db"]["port"] != nullptr) ? json["db"]["port"].get<int>() : 3306;
-
-    // log config reading
-    _logfile = (json["logfile"] != nullptr) ? json["logfile"].get<std::string>() : nullptr;
+    _log_file = (json["log_file"] != nullptr) ? json["log_file"].get<std::string>() : nullptr;
 
     return true;
-}
-
-bool ans_Config::is_resumable() const {
-    return _resumable;
-}
-
-void ans_Config::set_resumable(bool _resumable) {
-    ans_Config::_resumable = _resumable;
 }
 
 bool ans_Config::is_persist() const {
@@ -86,52 +54,20 @@ void ans_Config::set_persist(bool _persist) {
     ans_Config::_persist = _persist;
 }
 
-const std::string &ans_Config::get_flowroot() const {
-    return _flowroot;
+const std::string &ans_Config::get_flow_root() const {
+    return _flow_root;
 }
 
-void ans_Config::set_flowroot(const std::string &_flowroot) {
-    ans_Config::_flowroot = _flowroot;
+void ans_Config::set_flow_root(const std::string &_flow_root) {
+    ans_Config::_flow_root = _flow_root;
 }
 
-const std::vector<std::string> &ans_Config::get_matchers() const {
-    return _matchers;
+const std::string &ans_Config::get_filter() const {
+    return _filter;
 }
 
-void ans_Config::set_matchers(const std::vector<std::string> &_matchers) {
-    ans_Config::_matchers = _matchers;
-}
-
-const std::vector<std::string> &ans_Config::get_filters() const {
-    return _filters;
-}
-
-void ans_Config::set_filters(const std::vector<std::string> &_filters) {
-    ans_Config::_filters = _filters;
-}
-
-int ans_Config::get_max_memory() const {
-    return _max_memory;
-}
-
-void ans_Config::set_max_memory(int _max_memory) {
-    ans_Config::_max_memory = _max_memory;
-}
-
-int ans_Config::get_max_thread() const {
-    return _max_thread;
-}
-
-void ans_Config::set_max_thread(int _max_thread) {
-    ans_Config::_max_thread = _max_thread;
-}
-
-bool ans_Config::is_daemon() const {
-    return _daemon;
-}
-
-void ans_Config::set_daemon(bool _daemon) {
-    ans_Config::_daemon = _daemon;
+void ans_Config::set_filter(const std::string &_filter) {
+    ans_Config::_filter = _filter;
 }
 
 const std::vector<std::string> &ans_Config::get_plugins() const {
@@ -142,50 +78,10 @@ void ans_Config::set_plugins(const std::vector<std::string> &_plugins) {
     ans_Config::_plugins = _plugins;
 }
 
-const std::string &ans_Config::get_db_host() const {
-    return _db_host;
+const std::string &ans_Config::get_log_file() const {
+    return _log_file;
 }
 
-void ans_Config::set_db_host(const std::string &_db_host) {
-    ans_Config::_db_host = _db_host;
-}
-
-const std::string &ans_Config::get_db_user() const {
-    return _db_user;
-}
-
-void ans_Config::set_db_user(const std::string &_db_user) {
-    ans_Config::_db_user = _db_user;
-}
-
-const std::string &ans_Config::get_db_passwd() const {
-    return _db_passwd;
-}
-
-void ans_Config::set_db_passwd(const std::string &_db_passwd) {
-    ans_Config::_db_passwd = _db_passwd;
-}
-
-const std::string &ans_Config::get_db_name() const {
-    return _db_name;
-}
-
-void ans_Config::set_db_name(const std::string &_db_name) {
-    ans_Config::_db_name = _db_name;
-}
-
-int ans_Config::get_db_port() const {
-    return _db_port;
-}
-
-void ans_Config::set_db_port(int _db_port) {
-    ans_Config::_db_port = _db_port;
-}
-
-const std::string &ans_Config::get_logfile() const {
-    return _logfile;
-}
-
-void ans_Config::set_logfile(const std::string &_logfile) {
-    ans_Config::_logfile = _logfile;
+void ans_Config::set_log_file(const std::string &_log_file) {
+    ans_Config::_log_file = _log_file;
 }

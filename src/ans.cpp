@@ -6,15 +6,29 @@
 
 #include "ans.h"
 
-Ans::Ans(const ans_Config &config) {
+Ans::Ans(const ans_Config &config): _config(config) {}
+
+void Ans::run() {
+    std::shared_ptr<spdlog::logger> logger;
     try {
-        logger = spdlog::daily_logger_mt("daily_logger", config.get_logfile(), 0, 0);
+        logger = spdlog::daily_logger_mt("daily_logger", _config.get_log_file(), 0, 0);
     } catch (spdlog::spdlog_ex &ex) {
         std::cout << "Log init failed: " << ex.what() << std::endl;
     }
 
     logger->set_pattern("[%H:%M:%S %z] [p %p] [t %t] [%l] %v");
-//    // Release and close all loggers
+
+    // Release and close all loggers
 //    spdlog::drop_all();
 
+    ans_File file_module(_config.is_persist(), _config.get_flow_root(), logger);
+    file_module.start();
+}
+
+const ans_Config &Ans::getConfig() const {
+    return _config;
+}
+
+void Ans::setConfig(const ans_Config &config) {
+    Ans::_config = config;
 }

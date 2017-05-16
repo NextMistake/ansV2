@@ -8,6 +8,8 @@
 #include <vector>
 #include <memory>
 
+#include <semaphore.h>
+
 #include "ans_Config.h"
 #include "ans_File.h"
 
@@ -18,13 +20,13 @@ public:
     Ans(const ans_Config &config);
 
     void run();
+
+    const ans_Config &getConfig() const;
+
+    void setConfig(const ans_Config &config);
+
 private:
-    bool monitor;
-    bool breakpoint;
-
-
-    std::shared_ptr<spdlog::logger> logger;
-    std::unique_ptr<ans_File> ans_file;
+    ans_Config _config;
 };
 
 #endif //ANSV2_ANS_H

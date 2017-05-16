@@ -1,36 +1,7 @@
 {
-  "file" :
-  {
-    "rootpath" : "123",
-    "resumable" : true,
-    "persist" : true,
-    "matcher" :
-    [
-      "123",
-      "12"
-    ]
-  },
-  "pkt_filters" :
-  [
-    "123"
-  ],
-  "run" :
-  {
-    "max_memory" : 10,
-    "max_thread" : 10,
-    "daemon" : "yes"
-  },
-  "plugins":
-  [
-    "123"
-  ],
-  "db" :
-  {
-    "host" : "localhost",
-    "user" : "root",
-    "passwd" : "buptana",
-    "name" : "analysis",
-    "port" : 3390
-  },
-  "logfile" : "/home/well/logs/ans"
+  "persist" : true,
+  "root_path" : "/home/well/flow",
+  "pkt_filter" : "",
+  "plugins": ["123"],
+  "log_file" : "/home/well/logs/ans"
 }
