@@ -1,13 +1,29 @@
 #include <iostream>
 
+#include <signal.h>
+
 #include "ans.h"
-#include "ans_Config.h"
+
+std::function<void()> fp;
+
+void stop(int) {
+    if (fp) {
+        fp();
+    }
+    exit(0);
+}
 
 int main() {
+
+    signal(SIGINT, stop);
+
     ans_Config config;
     config.read_config("config.json");
     Ans ans{config};
+
+    fp = std::bind(&Ans::stop, &ans);
+
     ans.run();
-    std::cout << "main return 0" << std::endl;
+
     return 0;
 }

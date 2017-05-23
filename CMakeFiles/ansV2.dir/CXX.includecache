@@ -47,8 +47,6 @@ ans_Log.h
 /home/well/Desktop/ansV2/src/ans_Log.h
 
 /home/well/Desktop/ansV2/src/ans_File.cpp
-thread
--
 iostream
 -
 fstream
@@ -71,11 +69,17 @@ queue
 -
 memory
 -
+thread
+-
 mutex
+-
+map
 -
 semaphore.h
 -
 time.h
+-
+sys/inotify.h
 -
 spdlog/spdlog.h
 /home/well/Desktop/ansV2/src/spdlog/spdlog.h
@@ -93,10 +97,10 @@ string
 /home/well/Desktop/ansV2/src/main.cpp
 iostream
 -
+signal.h
+-
 ans.h
 /home/well/Desktop/ansV2/src/ans.h
-ans_Config.h
-/home/well/Desktop/ansV2/src/ans_Config.h
 
 /home/well/Desktop/ansV2/src/nlohann_json.hpp
 algorithm
